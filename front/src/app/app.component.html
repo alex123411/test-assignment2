@@ -1,0 +1,36 @@
+<div class='container'>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Genre 1</th>
+        <th>Genre 2</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>{{movie.id}}</td>
+        <td>{{movie.name}}</td>
+        <td>{{movie.genre1}}</td>
+        <td>{{movie.genre2}}</td>
+        <td>{{movie.year}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class='filters'>
+    
+      <b>Choose year</b><br>
+      <input (change)="yearHandler($event)" type="number" size="40">
+       
+      <b>Choose genre</b><br>
+      <input (change)="genreHandler($event)" type="text" size="40">
+      
+      <button (click)="buttonSearch()" class=" buttonSearch"> search </button>
+     
+        
+      
+ 
+  </div>
+</div>
